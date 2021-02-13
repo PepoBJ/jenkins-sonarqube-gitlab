@@ -35,7 +35,6 @@ services:
        image: sonarqube:7.9.2-community
        container_name: sonar-container
        restart: always
-       command: bash -c "sysctl -w vm.max_map_count=262144 && sysctl -w fs.file-max=65536 && ulimit -n 65536"
        networks:
            - sonarnet
        environment:
